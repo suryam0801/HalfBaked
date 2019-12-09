@@ -11,9 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toolbar;
@@ -27,7 +24,7 @@ import com.google.gson.Gson;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ChatFragment extends Fragment{
+public class CategoryTwo extends Fragment{
 
     Toolbar toolbar;
     RecyclerView recyclerView;
@@ -44,7 +41,7 @@ public class ChatFragment extends Fragment{
         setHasOptionsMenu(true);
 
 
-        v = inflater.inflate(R.layout.fragment_chat, container, false);
+        v = inflater.inflate(R.layout.category_two, container, false);
 
         recyclerView = (RecyclerView)v.findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
@@ -53,6 +50,11 @@ public class ChatFragment extends Fragment{
         loadRSS();
 
         return v;
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 
     private void loadRSS(){

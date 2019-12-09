@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getResources().getString(R.string.app_name));
+        toolbar.setTitle("Half Baked");
         setSupportActionBar(toolbar);
 
         tabLayout = findViewById(R.id.tablayout);
