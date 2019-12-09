@@ -54,7 +54,6 @@ public class CategoryTwo extends Fragment{
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-
     }
 
     private void loadRSS(){
